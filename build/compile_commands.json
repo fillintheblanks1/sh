@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/FLABBERGASTING DUMP THAT GOES HERE/Master Folder/shell/build",
+  "command": "\"C:\\Program Files\\LLVM\\bin\\clang++.exe\" -O0 -g -Xclang -gcodeview -std=gnu++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\shell.dir\\src\\main.cpp.obj -c \"C:\\FLABBERGASTING DUMP THAT GOES HERE\\Master Folder\\shell\\src\\main.cpp\"",
+  "file": "C:/FLABBERGASTING DUMP THAT GOES HERE/Master Folder/shell/src/main.cpp",
+  "output": "C:/FLABBERGASTING DUMP THAT GOES HERE/Master Folder/shell/build/CMakeFiles/shell.dir/src/main.cpp.obj"
+}
+]

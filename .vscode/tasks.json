@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cmake",
+			"label": "CMake: build",
+			"command": "build",
+			"targets": [
+				"all"
+			],
+			"problemMatcher": [],
+			"detail": "CMake template build task"
+		},
+		{
+			"label": "Build and Run Shell (External)",
+			"type": "shell",
+			"command": "cmd /c start \"\" cmd /k \"\"${workspaceFolder}\\build\\shell.exe\"\"",
+			"dependsOn": "CMake: build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": []
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+  "modules" : 
+  [
+    {
+      "is-std-library" : true,
+      "logical-name" : "std",
+      "source-path" : "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.52.37025/modules/std.ixx"
+    },
+    {
+      "is-std-library" : true,
+      "logical-name" : "std.compat",
+      "source-path" : "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.52.37025/modules/std.compat.ixx"
+    }
+  ],
+  "revision" : 1,
+  "version" : 1
+}
