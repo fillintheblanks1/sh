@@ -1,14 +1,14 @@
+#include "builtins.h"
+#include "executor.h"
+#include "pathSearch.h"
+#include "shell_parser.h"
 #include <iostream>
 #include <string>
 #include <unordered_set>
 #include <vector>
 
-#include "builtins.h"
-#include "executor.h"
-#include "pathSearch.h"
-#include "shell_parser.h"
-
-std::unordered_set<std::string> commandSet = {"echo", "type", "exit", "pwd", "cd"};
+std::unordered_set<std::string> commandSet = {"echo", "type", "exit", "pwd",
+                                              "cd"};
 
 int main() {
   std::string line;
@@ -35,6 +35,10 @@ int main() {
         handleEcho(words);
       } else if (cmd == "type") {
         handleType(words);
+      } else if (cmd == "pwd") {
+        handlePwd(words);
+      } else if (cmd == "cd") {
+        handleCd(words);
       }
       continue;
     }
