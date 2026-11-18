@@ -9,7 +9,8 @@ add_executable(shell
     src/main.cpp
     src/builtins.cpp
     src/shell_parser.cpp
-    src/pathSearch.cpp)
+    src/pathSearch.cpp
+    src/executor.cpp)
 
 if(MSVC)
   target_compile_options(shell PRIVATE /W4)

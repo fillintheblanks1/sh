@@ -48,30 +48,20 @@ void handleType(const std::vector<std::string> &words) {
   }
 
   const std::string &typeName = words[1];
-  // commandMap existence (builtin) 
+
+  // builtin?
   if (commandSet.count(typeName) > 0) {
     std::cout << typeName << " is a builtin function" << std::endl;
     return;
   }
-  // try searching the whole enviorment (need to add more)
-  std::string pathEnv = getPathText();
-  if (!pathEnv.empty()) {
-    std::vector<std::string> directories = splitPath(pathEnv);
 
-    for (const std::string &dir : directories) {
-      std::string fullPath = dir + "\\" + typeName + ".exe";
-
-      if (fileExists(fullPath)) {
-        std::cout << typeName << " is " << fullPath << std::endl;
-        return; // Found it, exit the function
-      }
-      std::string fullPathNoExt = dir + "\\" + typeName;
-      if (fileExists(fullPathNoExt)) {
-        std::cout << typeName << " is " << fullPathNoExt << std::endl;
-        return;
-      }
-    }
+  // program in PATH?
+  std::string found = findInPath(typeName);
+  if (!found.empty()) {
+    std::cout << typeName << " is " << found << std::endl;
+    return;
   }
+
   // nothing matched
   std::cout << typeName << ": not found" << std::endl;
 }
