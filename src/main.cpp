@@ -110,12 +110,12 @@ void handleType(const std::vector<std::string> &words) {
   }
 
   const std::string &typeName = words[1];
-  // commandMap existence (builtin)
+  // commandMap existence (builtin) 
   if (commandSet.count(typeName) > 0) {
     std::cout << typeName << " is a builtin function" << std::endl;
     return;
   }
-  // try searching the whole enviorment
+  // try searching the whole enviorment (need to add more)
   std::string pathEnv = getPathText();
   if (!pathEnv.empty()) {
     std::vector<std::string> directories = splitPath(pathEnv);
